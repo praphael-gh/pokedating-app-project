@@ -1,16 +1,21 @@
 import React, {useState, useEffect} from "react";
 import Header from "./Header";
+import PokeCard from "./PokeCard";
 
 function App() {
   const [pokemon, setPokemon] = useState(null)
   
   useEffect(() => {
     // const numberOfPokemon = 
-    for (let i = 1; i <= 9; i++){
+    // let i be a randam number between 1-10; i is the index of which loop we are at
+    for (let i = 1; i <= 8; i++)
+     {
     fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
     .then((resp) => resp.json())
     .then((data)=> {
-      setPokemon(data);
+      console.log(data)
+       setPokemon(data);
+      //setPokemon([...pokemon, data])
     });
 }}, []);   
 
@@ -19,12 +24,7 @@ function App() {
 return (
     <div className="App">
       <Header />
-      <img src={pokemon.sprites.front_default} alt="pokemon front view"/>
-      <p>Name: {pokemon.name.toUpperCase()}</p>
-      <p>Index Number: {pokemon.order}</p>
-      <p>Type: {pokemon.types[0].type.name.toUpperCase()} </p> 
-      <p>Weight: {pokemon.weight}lbs</p>    
-        
+     <PokeCard pokemon={pokemon}/>  
     </div>
   );
 }
