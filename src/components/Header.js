@@ -5,7 +5,15 @@ import NavBar from "./NavBar";
 function Header() {
     return (
         <>
-        <header>PokeDatingzZ</header>
+        <header>
+        <img src="./assets/pokedating.png" alt="PokeDatingzZ"/>
+        <h1>
+        PokeDatingzZ
+        <span className="logo" role="img">
+        💗 
+        </span>
+      </h1>
+      </header>
         <NavBar />
         <About />
         </>

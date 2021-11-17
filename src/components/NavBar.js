@@ -12,7 +12,7 @@ function NavBar() {
     return (
         <>
         <header className="navbar">
-            <p>Swank</p>
+            <p>Ready to Find Love?</p>
         <nav className="navigation">
         </nav>
         </header>
