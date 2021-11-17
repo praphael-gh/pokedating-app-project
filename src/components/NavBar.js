@@ -1,21 +1,21 @@
 import React from "react";
-// import {
-//     Nav, 
-//     NavLink, 
-//     Bars,
-//     NavMenu,
-//     NavBtn,
-//     NavBtnLink,
-// } from "./NavbarElements"
+import { Route, Switch } from "react-router-dom"  
+
+import Header from "./Header";
+import Search from "./Search";
+import About from "./About";
 
 function NavBar() {
     return (
         <>
-        <header className="navbar">
-            <p>Swank</p>
-        <nav className="navigation">
-        </nav>
-        </header>
+        <Header />
+        <Switch >
+            <Search />
+            <Route path="/about">
+                <About />
+            </Route>
+        </Switch>
+        
         </>
     )
 }

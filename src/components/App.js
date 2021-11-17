@@ -1,11 +1,17 @@
 import React from "react";
-import Header from "./Header";
+
+// import { Route } from "react-router";
+// import Header from "./Header";
+// import Search from "./Search";
+// import About from "./About";
+
+import NavBar from "./NavBar";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <>
+    <NavBar />
+    </>
   );
 }
 
