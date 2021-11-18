@@ -46,6 +46,16 @@ function NavBar() {
         >
             Catalog
         </NavLink>
+        <NavLink
+        to="/newform"
+        exact
+        style={linkStyles}
+        activeStyle={{
+            background: "red",
+        }}
+        >
+            New Form
+        </NavLink>
         </>
     )
 }

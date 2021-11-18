@@ -1,15 +1,16 @@
 import React from "react";
+// import {pokemon} from "../data/db.json"
 
-function PokeCard({ pokemon: {sprites, name, order, weight, types} }) {
-
+function PokeCard({pokemon:{ image, name, pokeindex, type, height, weight }}) {
 return (
-<div>
- <img src={sprites.front_default} alt="pokemon front view"/>
- <p>Name: {name.toUpperCase()}</p>
- <p>Index Number: {order}</p>
- <p>Type: {types[0].type.name.toUpperCase()} </p> 
- <p>Weight: {weight}lbs</p> 
- </div>
+<div id="poke-card">
+<img src={image} alt="pokemon front view"/>
+    <p>Name: {name}</p>
+    <p>Index Number: {pokeindex}</p>
+    <p>Type: {type}</p> 
+    <p>Height: {height}ft</p>
+    <p>Weight: {weight}lbs</p> 
+</div>
 )
 }
 

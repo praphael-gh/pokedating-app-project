@@ -5,42 +5,47 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./Home"
 import About from "./About";
 import NavBar from "./NavBar";
-import PokeCard from "./PokeCard";
 import PokeContainer from "./PokeContainer";
+import PokeForm from "./PokeForm";
 
 function App() {
-  const [pokemon, setPokemon] = useState("")
+  const [pokemons, setPokemons] = useState([])
+
+  function handleNewPokemon(newPokemon) {
+    const newPokemonArray = [...pokemons, newPokemon]
+    setPokemons(newPokemonArray)
+    }
 
   // This pulls 1 random pokemon
   useEffect(() => {
-    let i = Math.floor(Math.random() * 9) + 1
-    fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+    fetch('http://localhost:3001/pokemons')
     .then(resp => resp.json())
     .then(pokemonData => {
-      console.log(pokemonData)
-      setPokemon(pokemonData);
+      console.log(pokemonData);
+      setPokemons(pokemonData);
     });
 }, []); 
 
-  if(!pokemon) return <p>Loading...</p>
+  if(!pokemons) return <p>Loading...</p>
 
 return (
-    <div>
-      <Home />
+    <div>  
       <NavBar />
       <Switch>
+        <Route exact path="/newform">
+          <PokeForm handleNewPokemon={handleNewPokemon}/>
+        </Route>
         <Route exact path="/catalog">
-          <PokeContainer />
+          <PokeContainer pokemons={pokemons}/>
         </Route>
         <Route exact path="/about">
           <About />
         </Route>
         <Route exact path="/">
-          <Home />
+          <Home pokemons={pokemons}/>
         </Route>
       </Switch>
-      <PokeCard pokemon={pokemon}/>
-      {/* <PokeContainer />   */}
+      
     </div>
   );
 }

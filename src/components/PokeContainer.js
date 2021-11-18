@@ -2,35 +2,29 @@ import React, { useEffect, useState } from "react";
 
 import PokeCard from "./PokeCard";
 
-function PokeContainer() {
-    const [pokeCatalog, setPokeCatalog] = useState([])
-
-    useEffect(() => { 
-        
-        for (let i = 1; i <= 9; i++) {
-            fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-            .then(resp => resp.json())
-            .then((pokeLogData) => {
-                setPokeCatalog(pokeLogData)
-            })
-        }
-    })
-
-    function handleCatalogFill(pokemonObj) {
-        return (
-            <div>
-                <PokeCard 
-                key={pokemonObj.index} 
-                image={pokemonObj.sprites.front_default}
-                name={pokemonObj.name.toUpperCase()} 
-                indexNumber={pokemonObj.order} 
-                type={pokemonObj.types[0].type.name.toUpperCase()}
-                weight={pokemonObj.weight} />
-            </div>
-        )}
-
-        // return handleCatalogFill()
-    }
+// function PokeContainer({pokemon}) {
+//     const pokeListed = pokemon.map((pokemonObj) => {
+//         return (
+//             <div>
+//                 <PokeCard 
+//                 key={pokemonObj.id}
+//                 pokemon={pokeListed}
+//                 />
+//             </div>
+//         )
+// })
+// }
+function PokeContainer ({pokemons}) {
+    return (
+      <main>
+       <ul className="cards">
+        {pokemons.map((pokemon) => (
+        <PokeCard key={pokemon.id} pokemon={pokemon} />
+        ))}
+       </ul>
+      </main>
+     );
+}
 
 
 export default PokeContainer;

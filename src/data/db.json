@@ -1,0 +1,130 @@
+{
+  "pokemons": [
+    {
+      "id": 1,
+      "name": "Bulbasaur",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+      "type": "Grass",
+      "pokeindex": 1,
+      "weight": 69,
+      "height": 2.5
+    },
+    {
+      "id": 2,
+      "name": "Ivysaur",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+      "type": "Grass",
+      "pokeindex": 2,
+      "weight": 130,
+      "height": 3
+    },
+    {
+      "id": 3,
+      "name": "Venusaur",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+      "type": "Grass",
+      "pokeindex": 3,
+      "weight": 1000,
+      "height": 3.5
+    },
+    {
+      "id": 4,
+      "name": "Charmander",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+      "type": "Fire",
+      "pokeindex": 4,
+      "weight": 85,
+      "height": 4
+    },
+    {
+      "id": 5,
+      "name": "Charmeleon",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+      "type": "Fire",
+      "pokeindex": 5,
+      "weight": 190,
+      "height": 6
+    },
+    {
+      "id": 6,
+      "name": "Charizard",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+      "type": "Fire",
+      "pokeindex": 6,
+      "weight": 905,
+      "height": 10
+    },
+    {
+      "id": 7,
+      "name": "Squirtle",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+      "type": "Water",
+      "pokeindex": 7,
+      "weight": 90,
+      "height": 3
+    },
+    {
+      "id": 8,
+      "name": "Wartortle",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+      "type": "Water",
+      "pokeindex": 8,
+      "weight": 225,
+      "height": 4.5
+    },
+    {
+      "id": 9,
+      "name": "Blastoise",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+      "type": "Water",
+      "pokeindex": 9,
+      "weight": 855,
+      "height": 6
+    },
+    {
+      "name": "",
+      "image": "",
+      "type": "",
+      "pokeindex": 0,
+      "weight": 0,
+      "height": 0,
+      "id": 10
+    },
+    {
+      "name": "Pierce",
+      "image": "",
+      "type": "Fire",
+      "pokeindex": "4",
+      "weight": "6",
+      "height": "4",
+      "id": 11
+    },
+    {
+      "name": "Pierce",
+      "image": "",
+      "type": "Fire",
+      "pokeindex": "4",
+      "weight": "6",
+      "height": "4",
+      "id": 12
+    },
+    {
+      "name": "Pierce",
+      "image": "",
+      "type": "Fire",
+      "pokeindex": "4",
+      "weight": "6",
+      "height": "4",
+      "id": 13
+    },
+    {
+      "name": "Pierce",
+      "image": "",
+      "type": "Fire",
+      "pokeindex": "4",
+      "weight": "6",
+      "height": "4",
+      "id": 14
+    }
+  ]
+}

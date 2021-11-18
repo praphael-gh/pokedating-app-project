@@ -1,0 +1,12 @@
+#poke-card {
+    background-color: rgb(191, 191, 236);
+    display: flex;
+    flex-wrap: wrap;
+    border-color:white;
+}
+
+#poke p {
+    margin-left: 5px;
+    padding: 5px;
+}
+
