@@ -1,56 +1,37 @@
 import React, {useState, useEffect} from "react";
 import Header from "./Header";
+import Search from "./Search";
+import PokeContainer from "./PokeContainer";
 
 function App() {
-  const [pokemon, setPokemon] = useState(null)
+  const [pokemon, setPokemon] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
   
   useEffect(() => {
-    // const numberOfPokemon = 
-    for (let i = 0; i <= 8; i++){
-    fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+    fetch("http://localhost:3000/pokemons")
     .then((resp) => resp.json())
     .then((data)=> {
       setPokemon(data);
       console.log(data)
     });
-}}, []);   
+  }, []);   
 
   if(!pokemon) return <p>Loading...</p>
+
+  const displayedPokemon = pokemon.filter((pokemon) => {
+    return pokemon.name.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+  
 
 return (
     <div className="App">
       <Header />
-      <img src={pokemon.sprites.front_default} alt="pokemon front view"/>
-      <p>Name: {pokemon.name.toUpperCase()}</p>
-      <p>Index Number: {pokemon.order}</p>
-      <p>Type: {pokemon.types[0].type.name.toUpperCase()} </p> 
-      <p>Weight: {pokemon.weight}lbs</p>    
+          
+      <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+      <PokeContainer pokemons={displayedPokemon}/>
         
     </div>
   );
 }
 
 export default App;
-
-// function App() {
-//   const [pokemon, setPokemon] = useState(null)
-  
-//   useEffect(() => {
-//     fetch("https://pokeapi.co/api/v2/pokemon?limit=9&offset=0")
-//     .then((resp) => resp.json())
-//     .then((data)=> {
-//       setPokemon(data.results);
-//     });
-// }, []);   
-
-//   if(!pokemon) return <p>Loading...</p>
-
-// return (
-//     <div className="App">
-//       <Header />
-//       <div> {pokemon.map((pokemon) => pokemon.name)} </div>
-//     </div>
-//   );
-// }
-
-// export default App;
