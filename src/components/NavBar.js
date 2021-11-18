@@ -1,21 +1,51 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom"  
+import { NavLink } from "react-router-dom"  
 
 import Header from "./Header";
-import Search from "./Search";
-import About from "./About";
 
 function NavBar() {
+    const linkStyles = {
+        display:"inline-block",
+        width: "50px",
+        padding: "12px",
+        margin: "0 6px 6px",
+        background: "red",
+        textDecoration: "none",
+        color: "white",
+    }
     return (
         <>
-        <Header />
-        <Switch >
-            <Search />
-            <Route path="/about">
-                <About />
-            </Route>
-        </Switch>
-        
+        <Header/>
+        <NavLink
+        to="/"
+        exact
+        style={linkStyles}
+        activeStyle={{
+            background: "red",
+        }}
+        >
+            Home
+        </NavLink>
+        <NavLink
+        to="/about"
+        exact
+        style={linkStyles}
+        activeStyle={{
+            background: "red",
+        }}
+        >
+            About
+        </NavLink>
+        <NavLink
+        to="/catalog"
+        exact
+        style={linkStyles}
+        activeStyle={{
+            background:"red",
+        }}
+        >
+            Catalog
+        </NavLink>
         </>
     )
 }
