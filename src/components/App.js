@@ -6,11 +6,12 @@ function App() {
   
   useEffect(() => {
     // const numberOfPokemon = 
-    for (let i = 1; i <= 8; i++){
+    for (let i = 0; i <= 8; i++){
     fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
     .then((resp) => resp.json())
     .then((data)=> {
       setPokemon(data);
+      console.log(data)
     });
 }}, []);   
 
