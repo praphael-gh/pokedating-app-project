@@ -7,13 +7,15 @@ import About from "./About";
 import NavBar from "./NavBar";
 import PokeContainer from "./PokeContainer";
 import PokeForm from "./PokeForm";
+import Search from "./Search";
 
 function App() {
-  const [pokemons, setPokemons] = useState([])
+  const [pokemon, setPokemon] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   function handleNewPokemon(newPokemon) {
-    const newPokemonArray = [...pokemons, newPokemon]
-    setPokemons(newPokemonArray)
+    const newPokemonArray = [...pokemon, newPokemon]
+    setPokemon(newPokemonArray)
     }
 
   // This pulls 1 random pokemon
@@ -22,27 +24,32 @@ function App() {
     .then(resp => resp.json())
     .then(pokemonData => {
       console.log(pokemonData);
-      setPokemons(pokemonData);
+      setPokemon(pokemonData);
     });
 }, []); 
 
-  if(!pokemons) return <p>Loading...</p>
+  if(!pokemon) return <p>Loading...</p>
+
+  const displayedPokemon = pokemon.filter((pokemon) => {
+    return pokemon.name.toLowerCase().includes(searchTerm.toLowerCase());
+  });
 
 return (
     <div>  
       <NavBar />
+      <Search search={searchTerm} onSearchChange={setSearchTerm}/>
       <Switch>
         <Route exact path="/newform">
           <PokeForm handleNewPokemon={handleNewPokemon}/>
         </Route>
         <Route exact path="/catalog">
-          <PokeContainer pokemons={pokemons}/>
+          <PokeContainer pokemons={displayedPokemon}/>
         </Route>
         <Route exact path="/about">
           <About />
         </Route>
         <Route exact path="/">
-          <Home pokemons={pokemons}/>
+          <Home pokemons={pokemon}/>
         </Route>
       </Switch>
       
