@@ -3,10 +3,64 @@
     display: flex;
     flex-wrap: wrap;
     border-color:white;
+    border: 2px solid black;
+}
+
+#poke-card p {
+    margin: 5px;
+    background-color: rgb(191, 191, 236);
+}
+
+.app {
+    text-align: center;
+    
+}
+
+* {
+    /* text-align: center; */
+    background-color: deepskyblue;
 }
 
 #poke p {
     margin-left: 5px;
     padding: 5px;
+    
 }
 
+.pokeball {
+    height: 1cm;
+}
+
+.homeImage {
+    border: 2px solid red;
+    border-radius: 8px;
+    width: 400px;
+}
+
+.about {
+    border: 2px solid black;
+    background-color: white;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+#poke-card img{
+    background-color: rgb(191, 191, 236);
+}
+
+#search {
+    background-color: white;
+}
+
+.new-form input {
+    background-color: white;
+}
+
+
+.new-form button {
+    background-color: red;
+    color: white;
+}

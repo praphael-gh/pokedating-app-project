@@ -80,6 +80,24 @@
       "pokeindex": 9,
       "weight": 855,
       "height": 6
+    },
+    {
+      "name": "",
+      "image": "",
+      "type": "",
+      "pokeindex": 0,
+      "weight": 0,
+      "height": 0,
+      "id": 10
+    },
+    {
+      "name": "",
+      "image": "",
+      "type": "",
+      "pokeindex": 0,
+      "weight": 0,
+      "height": 0,
+      "id": 11
     }
   ]
 }

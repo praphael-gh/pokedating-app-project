@@ -34,7 +34,7 @@ function App() {
   });
 
 return (
-    <div>  
+    <div className="app">  
       <NavBar />
       {/* <Search search={searchTerm} onSearchChange={setSearchTerm}/> */}
       <Switch>

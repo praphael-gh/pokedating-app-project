@@ -4,8 +4,8 @@ import React from "react";
 function PokeCard({pokemon:{ image, name, pokeindex, type, height, weight }}) {
 return (
 <div id="poke-card">
-<img src={image} alt="pokemon front view"/>
-    <p>Name: {name}</p>
+<img classname="cardImage" src={image} alt="pokemon front view"/>
+    <p className="cardName" >Name: {name}</p>
     <p>Index Number: {pokeindex}</p>
     <p>Type: {type}</p> 
     <p>Height: {height}ft</p>
