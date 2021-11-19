@@ -1,21 +1,61 @@
 import React from "react";
-// import {
-//     Nav, 
-//     NavLink, 
-//     Bars,
-//     NavMenu,
-//     NavBtn,
-//     NavBtnLink,
-// } from "./NavbarElements"
+import { NavLink } from "react-router-dom"  
+
+import Header from "./Header";
 
 function NavBar() {
+    const linkStyles = {
+        display:"inline-block",
+        width: "75px",
+        padding: "12px",
+        margin: "0 6px 6px",
+        background: "red",
+        textDecoration: "none",
+        color: "white",
+    }
     return (
         <>
-        <header className="navbar">
-            <p>Ready to Find Love?</p>
-        <nav className="navigation">
-        </nav>
-        </header>
+        <Header/>
+        <NavLink
+        to="/"
+        exact
+        style={linkStyles}
+        activeStyle={{
+            background: "red",
+        }}
+        >
+            Home
+        </NavLink>
+        <NavLink
+        to="/about"
+        exact
+        style={linkStyles}
+        activeStyle={{
+            background: "red",
+        }}
+        >
+            About
+        </NavLink>
+        <NavLink
+        to="/catalog"
+        exact
+        style={linkStyles}
+        activeStyle={{
+            background:"red",
+        }}
+        >
+            Catalog
+        </NavLink>
+        <NavLink
+        to="/newform"
+        exact
+        style={linkStyles}
+        activeStyle={{
+            background: "red",
+        }}
+        >
+            New Form
+        </NavLink>
         </>
     )
 }
