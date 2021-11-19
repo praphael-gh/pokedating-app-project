@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 
-
 import Home from "./Home"
 import About from "./About";
 import NavBar from "./NavBar";
@@ -37,12 +36,13 @@ function App() {
 return (
     <div>  
       <NavBar />
-      <Search search={searchTerm} onSearchChange={setSearchTerm}/>
+      {/* <Search search={searchTerm} onSearchChange={setSearchTerm}/> */}
       <Switch>
         <Route exact path="/newform">
           <PokeForm handleNewPokemon={handleNewPokemon}/>
         </Route>
         <Route exact path="/catalog">
+          <Search search={searchTerm} onSearchChange={setSearchTerm}/>
           <PokeContainer pokemons={displayedPokemon}/>
         </Route>
         <Route exact path="/about">
