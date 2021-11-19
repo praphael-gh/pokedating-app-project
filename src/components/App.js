@@ -12,6 +12,21 @@ function App() {
   const [pokemon, setPokemon] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
+  function pokemonRandomizer() {
+    let i = Math.floor(Math.random() * 10) + 1
+    const randomPokemon = pokemon[i]
+    return randomPokemon
+    // console.log(randomPokemon)
+  }
+
+  const randomPokemon = pokemon.length > 0 ? pokemonRandomizer() : {
+    name:"",
+    image:"",
+    type:"",
+    weight:"",
+    height:""
+  }
+
   function handleNewPokemon(newPokemon) {
     const newPokemonArray = [...pokemon, newPokemon]
     setPokemon(newPokemonArray)
@@ -49,7 +64,7 @@ return (
           <About />
         </Route>
         <Route exact path="/">
-          <Home pokemons={pokemon}/>
+          <Home randomPokemon={randomPokemon}/>
         </Route>
       </Switch>
       

@@ -1,6 +1,7 @@
 import React from "react";
 
-function PokeMatch({pokemon:{image, name, pokeindex, type, weight}}) {
+function PokeRandom({pokemon:{image, name, pokeindex, type, weight}}) {
+    
     return (
     <div id="poke-match">
         <img src={image} alt="pokemon front view"/>
@@ -12,4 +13,4 @@ function PokeMatch({pokemon:{image, name, pokeindex, type, weight}}) {
     )
 }
 
-export default PokeMatch;
+export default PokeRandom;

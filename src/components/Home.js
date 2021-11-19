@@ -1,11 +1,14 @@
 import React from "react";
-// import PokeMatch from "./PokeMatch"
+import PokeRandom from "./PokeRandom"
 
-function Home() {
-    // let i = Math.floor(Math.random() * 9 + 1)
-    // return (
-    //     <PokeMatch pokemons={pokemons[i]} />
-    return <h3>Welcome to PokeDatingzZ</h3>
+function Home({randomPokemon}) {
+
+    return (
+    <>
+        <h3>Welcome to PokeIndexZ</h3>
+        <PokeRandom pokemon={randomPokemon} />
+    </>
+    )
 }
 
 export default Home;

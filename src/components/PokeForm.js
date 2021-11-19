@@ -3,7 +3,7 @@ import React, {useState} from "react";
 function PokeForm({handleNewPokemon}) {
     const [formData, setFormData] = useState({
         name:"",
-        image:"",
+        image:"https://img.uquiz.com/content/images/quiz_share_images/1613315734.jpg",
         type:"",
         pokeindex:0,
         weight:0,

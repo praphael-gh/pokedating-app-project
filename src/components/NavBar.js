@@ -6,7 +6,7 @@ import Header from "./Header";
 function NavBar() {
     const linkStyles = {
         display:"inline-block",
-        width: "50px",
+        width: "75px",
         padding: "12px",
         margin: "0 6px 6px",
         background: "red",

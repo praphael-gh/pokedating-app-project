@@ -1,12 +1,94 @@
+@font-face {
+    font-family: 'Pokemon Solid';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Pokemon Solid'), url('https://fonts.cdnfonts.com/s/17890/Pokemon Solid.woff') format('woff');
+}
+
+#header {
+    font-family: 'Pokemon Solid';
+}
+
+h3 {
+    font-family: 'Pokemon Solid';
+}
+
+
 #poke-card {
     background-color: rgb(191, 191, 236);
     display: flex;
     flex-wrap: wrap;
     border-color:white;
+    border: 2px solid black;
+}
+
+#poke-card p {
+    margin: 5px;
+    background-color: rgb(191, 191, 236);
+}
+
+#poke-card img {
+    width: 96px;
+}
+
+.app {
+    text-align: center;
+    z-index: -2;
+}
+
+* {
+    text-align: center;
+    background-color: deepskyblue;
 }
 
 #poke p {
     margin-left: 5px;
     padding: 5px;
+    
 }
+
+.pokeball {
+    height: 1cm;
+}
+
+.homeImage {
+    position: absolute;
+    border: 2px solid red;
+    border-radius: 8px;
+    width: 400px;
+    z-index: -1;
+}
+
+.about {
+    border: 2px solid black;
+    background-color: white;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+#poke-card img{
+    background-color: rgb(191, 191, 236);
+}
+
+#search {
+    background-color: white;
+}
+
+.new-form input {
+    background-color: white;
+}
+
+
+.new-form button {
+    background-color: red;
+    color: white;
+}
+
+#poke-match {
+    background:none;
+}
+
 

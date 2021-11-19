@@ -3,9 +3,9 @@ import React from "react";
 function Header() {
     return (
     <>
-      <header>
+      <header id="header">
           <h1>
-          PokeDatingzZ
+          PokeIndexZ
             <span className="logo" role="img">
             💗 
             </span>
