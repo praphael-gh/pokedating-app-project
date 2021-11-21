@@ -4,7 +4,7 @@ function Header() {
     return (
         <div>
             <header>
-                <img src="./assets/pokedating.png" alt="PokeDatingzZ"/>
+                <p> PokeIndex </p>
             </header>
         </div>
     )
